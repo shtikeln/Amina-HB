@@ -238,22 +238,21 @@
     border-radius: 0;
     box-shadow: 0 0 40px 10px rgba(0,0,0,0.2);
     animation: letterExpand 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    transform: translate(-50%, -50%) scale(1);
   }
   
   @keyframes letterExpand {
     0% {
-      transform: translate(-50%, -50%) scale(1);
+      transform: scale(1);
+      opacity: 1;
+      z-index: 5;
+    }
+    50% {
+      transform: scale(1.5);
       opacity: 1;
       z-index: 5;
     }
     100% {
-    position: fixed;
-      left: 50vw;
-      top: 50vh;
-      height: auto;
-      width: 80vw;
-      transform: translate(-50%, -50%) scale(1);
+      transform: scale(1.5);
       opacity: 1;
       z-index: 5;
     }
