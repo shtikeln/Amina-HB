@@ -49,9 +49,9 @@
     function open() {
         envelope.addClass("open")
            .removeClass("close");
-        setTimeout(function() {
-            letter.addClass('fullscreen');
-        }, 1200);
+           setTimeout(function() {
+               letter.addClass('fullscreen');
+           }, 1200);
     }
     function close() {
         envelope.addClass("close")

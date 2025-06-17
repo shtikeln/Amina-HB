@@ -232,32 +232,33 @@
       }
   }
 
-.letter.fullscreen {
-  margin: 0;
-  z-index: 9999;
-  border-radius: 0;
-  box-shadow: 0 0 40px 10px rgba(0,0,0,0.2);
-  animation: letterExpand 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-@keyframes letterExpand {
-  0% {
+  .letter.fullscreen {
+    margin: 0;
+    z-index: 9999;
+    border-radius: 0;
+    box-shadow: 0 0 40px 10px rgba(0,0,0,0.2);
+    animation: letterExpand 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-    z-index: 5;
   }
-  100% {
-  position: fixed;
-    left: 50vw;
-    top: 50vh;
-    height: 80vh;
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-    z-index: 5;
+  
+  @keyframes letterExpand {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      z-index: 5;
+    }
+    100% {
+    position: fixed;
+      left: 50vw;
+      top: 50vh;
+      height: auto;
+      width: 80vw;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      z-index: 5;
+    }
   }
-}
-
-.letter.fullscreen::after {
-  display: none;
-}
+  
+  .letter.fullscreen::after {
+    display: none;
+  }
