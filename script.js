@@ -36,6 +36,7 @@
     var btn_open = $("#open");
     var btn_reset = $("#reset");
     var letter = envelope.find('.letter');
+    var book = $('.book');
     
     envelope.click( function() {
         open();
@@ -51,6 +52,7 @@
            .removeClass("close");
            setTimeout(function() {
                letter.addClass('fullscreen');
+               book.addClass('open');
            }, 1200);
     }
     function close() {

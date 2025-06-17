@@ -19,6 +19,16 @@
   cursor: pointer;
   z-index: 2;
 }
+.book {
+    font-size: auto;
+    color: #2c3e50;
+    opacity: 0;
+}
+.book.open {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeIn2 1s ease-out forwards;
+}
 .letter:after {
   content: "";
   position: absolute;
@@ -229,6 +239,17 @@
       to {
           opacity: 1;
           transform: translateY(0);
+      }
+  }
+
+  @keyframes fadeIn2 {
+      from {
+          opacity: 0;
+          transform: translateY(0);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(-50px);
       }
   }
 
